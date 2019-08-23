@@ -1,12 +1,13 @@
-# Arch-Silence theme for GRUB2
+# Kaleidos theme for GRUB2
 #
-# Copyright (C) 2015 Filippo Ghibellini
+# Copyright (C) 2019 Kaleidos
 
 #general settings
-title-text: ""
+title-text: "Kaleidos"
 desktop-color: "#333"
+desktop-image: "kaleidos-team.png"
 
-terminal-font: "Dejavu Sans Regular 12"
+terminal-font: "emulogic"
 terminal-left: "0"
 terminal-top: "0"
 terminal-width: "100%"
@@ -27,36 +28,42 @@ terminal-border: "0"
     highlight_style = "progress_bar/progress_bar_hl_*.png"
 }
 
-# arch logo
+# kaleidos logo
 + image {
-	top = 50%-200
-	left = 50%-75
-    file = "arch_logo.png"
+	top = 35%-100
+	left = 50%-100
+	file = "kaleidos-logo.png"
 }
 
 #boot menu
 + boot_menu {
-	left = 50%-150
+	left = 50%-250
 	width = 500
-	top = 50%+100
+	top = 60%
 	height = 300
 
-	item_font = "DejaVu Sans Bold 14"
+	item_font = "emulogic"
 	item_color = "#999"
-	selected_item_font = "DejaVu Sans Bold 14"
+	selected_item_font = "emulogic"
 	selected_item_color= "#fff"
 
 	item_height = 26
 	item_padding = 0
 	item_icon_space = 0
-	item_spacing = 1
+	item_spacing = 16
 	scrollbar = false
 }
 
 #help bar at the bottom
-+ image {
++ label {
 	top = 100%-56
-	left = 50%-175
-    file = "help_bar.png"
+	height = 30
+	width = 100%
+
+	color = "#fc1c6a"
+
+	align = "center"
+
+	text = "@KEYMAP_SHORT@"
 }
 
